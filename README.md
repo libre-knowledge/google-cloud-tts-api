@@ -11,14 +11,14 @@ Google 雲平台推出的，提供多語言多語音模型的文字轉語音服�
 1. 訪問 [實際運用 Text-to-Speech \| 示範 \| Text-to-Speech：自然流暢的語音合成服務  \|  Cloud Text-to-Speech API  \|  Google Cloud](https://cloud.google.com/text-to-speech#put-text-to-speech-into-action#section-2) 網址輸入您要轉成語音的文字資料以及轉換參數
 1. 開啟瀏覽器的開發者控制台，切換到「網路」分頁
 1. 點擊「SPEAK IT」按鈕並完成可能會有的機器人防護驗證挑戰
-1. 尋找網址開頭是 <https://cxl-services.appspot.com/proxy?url=https://texttospeech.googleapis.com/...> 的 API 呼叫，透過開發者控制台可能會有的下載回應功能將回應下載或複製下來，應可得到如隨附的 JSON 格式資料：
+1.尋找網址開頭是 <https://cxl-services.appspot.com/proxy?url=https://texttospeech.googleapis.com/...> 的 API 呼叫，透過開發者控制台可能會有的下載回應功能將回應下載或複製下來，應可得到如隨附的 JSON 格式資料：
 
     ```json
     {
     "audioContent": "UklGRgKCEgBXQVZFZm10IBAAAAABAAEAwF0AAIC7AAACABAAZGF0...
     ```
 
-  將除 `audioContent` 鍵之值以外的內容移除，然後保存為 _自訂檔名_.base64
+    將除 `audioContent` 鍵之值以外的內容移除，然後保存為 _自訂檔名_.base64
 
 1. 開啟一文字終端並切換工作目錄到 _自訂檔名_.base64 所在目錄，執行 `base64 -d result.base64 > result.wav` 命令將 base64 編碼的音訊資料解編碼，產出之 result.wav 即為轉換結果之音訊
 
